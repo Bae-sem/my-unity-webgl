@@ -18,7 +18,7 @@
       .ratio-box {
         width:100vw;            /* 가로는 최대 */
         max-height:100vh;       /* 세로는 넘지 않도록 */
-        aspect-ratio: 9 / 16;   /* 게임 비율(세로형) */
+        aspect-ratio: 16 / 9;   /* 게임 비율(세로형) */
         background:#000;        /* 레터박스 영역 */
         overflow:hidden;
       }
@@ -95,15 +95,15 @@
       };
 
       // 모바일 성능/안정화: DPR 캡
-      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      var DPR_CAP = isMobile ? 1.0 : Math.min(1.5, window.devicePixelRatio || 1);
-      config.devicePixelRatio = DPR_CAP;
+      //var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      //var DPR_CAP = isMobile ? 1.0 : Math.min(1.5, window.devicePixelRatio || 1);
+      //config.devicePixelRatio = DPR_CAP;
 
       // Unity 기본 모바일 스타일 클래스 추가 (필요 시)
-      if (isMobile) {
-        document.querySelector("#unity-container").className = "unity-mobile";
-        canvas.className = "unity-mobile";
-      }
+      //if (isMobile) {
+      //  document.querySelector("#unity-container").className = "unity-mobile";
+      //  canvas.className = "unity-mobile";
+      //}
 
       document.querySelector("#unity-loading-bar").style.display = "block";
 
