@@ -6,7 +6,6 @@
     <title>Unity Web Player | serving_zzang</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -54,8 +53,6 @@
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/New_Build.loader.js";
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      const DPR_CAP = isMobile ? 1.0 : Math.min(1.5, window.devicePixelRatio || 1);
       var config = {
         arguments: [],
         dataUrl: buildUrl + "/New_Build.data.unityweb",
@@ -65,8 +62,7 @@
         companyName: "BaDa Studio",
         productName: "serving_zzang",
         productVersion: "0.1.0",
-        devicePixelRatio: DRP_CAP,
-        // showBanner: unityShowBanner,
+        showBanner: unityShowBanner,
         // errorHandler: function(err, url, line) {
         //    alert("error " + err + " occurred at line " + line);
         //    // Return 'true' if you handled this error and don't want Unity
